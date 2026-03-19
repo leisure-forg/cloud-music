@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@neteasecloudmusicapienhanced/unblockmusic-utils':
         specifier: ^0.2.3
-        version: 0.2.3
+        version: 0.2.4
       axios:
         specifier: ^1.13.5
         version: 1.13.5
@@ -215,8 +215,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@neteasecloudmusicapienhanced/unblockmusic-utils@0.2.3':
-    resolution: {integrity: sha512-hhyGdOng6EWJmbV6L9TBVl5IHEzuDvGeCZz1o0XCSQ73I4UZ5jkW3OCQ/r7xhNiosKP0rIWVWeiUMTo3FaSgtw==}
+  '@neteasecloudmusicapienhanced/unblockmusic-utils@0.2.4':
+    resolution: {integrity: sha512-4DBBrCMyBewUfAlVnmFDUe5UHwrB+zosyTNJTyw48mYCNtAXIm1BuRX8St5S4JsTvvyt0OEixGr2rECeckhqTg==}
     hasBin: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -494,6 +494,7 @@ packages:
   basic-ftp@5.1.0:
     resolution: {integrity: sha512-RkaJzeJKDbaDWTIPiJwubyljaEPwpVWkm9Rt5h9Nd6h7tEXTJ3VB4qxdZBioV7JO5yLUaOKwz7vDOzlncUsegw==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -2014,6 +2015,9 @@ packages:
   pump@3.0.3:
     resolution: {integrity: sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==}
 
+  pump@3.0.4:
+    resolution: {integrity: sha512-VS7sjc6KR7e1ukRFhQSY5LM2uBWAUPiOPa/A3mkKmiMwSmRFUITt0xuj+/lesgnCv+dPIEYlkzrcyXgquIHMcA==}
+
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -2738,7 +2742,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@neteasecloudmusicapienhanced/unblockmusic-utils@0.2.3':
+  '@neteasecloudmusicapienhanced/unblockmusic-utils@0.2.4':
     dependencies:
       '@unblockneteasemusic/server': 0.28.0
       axios: 1.13.5
@@ -4694,7 +4698,7 @@ snapshots:
       joycon: 3.1.1
       on-exit-leak-free: 0.2.0
       pino-abstract-transport: 0.5.0
-      pump: 3.0.3
+      pump: 3.0.4
       readable-stream: 3.6.2
       rfdc: 1.4.1
       secure-json-parse: 2.7.0
@@ -4858,6 +4862,11 @@ snapshots:
   pstree.remy@1.1.8: {}
 
   pump@3.0.3:
+    dependencies:
+      end-of-stream: 1.4.5
+      once: 1.4.0
+
+  pump@3.0.4:
     dependencies:
       end-of-stream: 1.4.5
       once: 1.4.0
