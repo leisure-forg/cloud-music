@@ -148,12 +148,14 @@ async function consturctServer(moduleDefs) {
    */
   app.use((req, res, next) => {
     if (req.path !== '/' && !req.path.includes('.')) {
+      const origin = req.headers.origin || '*'
       res.set({
         'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': origin,
         'Access-Control-Allow-Headers': '*',
         'Access-Control-Allow-Methods': '*',
         'Content-Type': 'application/json; charset=utf-8',
+        'Vary': 'Origin',
       })
     }
     req.method === 'OPTIONS' ? res.status(204).end() : next()
