@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 8 node app.js)",
+      "Bash(timeout 5 node app.js)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(pkill -f \"node app.js\")"
+    ]
+  }
+}

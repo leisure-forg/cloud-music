@@ -144,15 +144,15 @@ async function consturctServer(moduleDefs) {
   app.use(express.static(path.join(__dirname, 'public')))
   /**
    * CORS & Preflight request
+   * 允许所有域名访问，所有请求方法
    */
   app.use((req, res, next) => {
     if (req.path !== '/' && !req.path.includes('.')) {
       res.set({
         'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin':
-          CORS_ALLOW_ORIGIN || req.headers.origin || '*',
-        'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type',
-        'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE,OPTIONS',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': '*',
         'Content-Type': 'application/json; charset=utf-8',
       })
     }
